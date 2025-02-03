@@ -1,6 +1,6 @@
-(ns lein-modules.compression-test
+(ns lein-modules-new-profiles.compression-test
   (:use clojure.test
-        lein-modules.compression)
+        lein-modules-new-profiles.compression)
   (:require [leiningen.core.project :as prj]))
 
 (deftest composite-compression

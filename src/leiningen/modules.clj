@@ -6,9 +6,9 @@
             [clojure.java.io :as io]
             [clojure.string :as s])
   (:use
-        [lein-modules.plugin :only (middleware)]
-        [lein-modules.common      :only (parent with-profiles read-project)]
-        [lein-modules.compression :only (compressed-profiles)]))
+        [lein-modules-new-profiles.plugin :only (middleware)]
+        [lein-modules-new-profiles.common      :only (parent with-profiles read-project)]
+        [lein-modules-new-profiles.compression :only (compressed-profiles)]))
 
 (defn child?
   "Return true if child is an immediate descendant of project"

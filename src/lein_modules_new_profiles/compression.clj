@@ -1,4 +1,4 @@
-(ns lein-modules.compression
+(ns lein-modules-new-profiles.compression
   "Only necessary because 2.3.4+ expands active profiles, and while
   the child may include the composites, its expansions will be
   different. This isn't foolproof."

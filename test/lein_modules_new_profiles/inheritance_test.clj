@@ -1,7 +1,7 @@
-(ns lein-modules.inheritance-test
+(ns lein-modules-new-profiles.inheritance-test
   (:use clojure.test
-        lein-modules.inheritance
-        [lein-modules.common :only (parent)])
+        lein-modules-new-profiles.inheritance
+        [lein-modules-new-profiles.common :only (parent)])
   (:require [leiningen.core.project :as prj]))
 
 (def project (prj/read "test-resources/grandparent/parent/child/project.clj"))

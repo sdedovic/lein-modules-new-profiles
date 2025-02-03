@@ -1,6 +1,6 @@
-(ns lein-modules.inheritance
-  (:use [lein-modules.common :only (config parent)]
-        [lein-modules.compression :only (compressed-profiles)])
+(ns lein-modules-new-profiles.inheritance
+  (:use [lein-modules-new-profiles.common :only (config parent)]
+        [lein-modules-new-profiles.compression :only (compressed-profiles)])
   (:require [leiningen.core.project :as prj]))
 
 (def normalizer (partial map (comp prj/dependency-vec prj/dependency-map)))

@@ -1,6 +1,6 @@
-(ns lein-modules.plugin-test
+(ns lein-modules-new-profiles.plugin-test
   (:use clojure.test
-        lein-modules.plugin)
+        lein-modules-new-profiles.plugin)
   (:require [leiningen.core.project :as prj]))
 
 (deftest unmerge-should-retain-versions
@@ -13,7 +13,7 @@
 
 (deftest version-keyword-should-override-group-symbol
   (let [p (-> (prj/read "test-resources/grandparent/parent/child/project.clj")
-            (update-in [:middleware] conj 'lein-modules.plugin/middleware)
-            (vary-meta update-in [:without-profiles :middleware] conj 'lein-modules.plugin/middleware))
+            (update-in [:middleware] conj 'lein-modules-new-profiles.plugin/middleware)
+            (vary-meta update-in [:without-profiles :middleware] conj 'lein-modules-new-profiles.plugin/middleware))
         deps (-> p prj/init-project :dependencies set)]
     (is (deps '[foo/d "2.0"]))))

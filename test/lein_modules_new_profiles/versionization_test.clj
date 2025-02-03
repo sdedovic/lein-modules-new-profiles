@@ -1,6 +1,6 @@
-(ns lein-modules.versionization-test
+(ns lein-modules-new-profiles.versionization-test
   (:use clojure.test
-        lein-modules.versionization)
+        lein-modules-new-profiles.versionization)
   (:require [leiningen.core.project :as prj]))
 
 (deftest versionization

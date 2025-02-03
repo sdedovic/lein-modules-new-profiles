@@ -1,8 +1,8 @@
 (ns leiningen.modules-test
   (:use clojure.test
         leiningen.modules
-        [lein-modules.common :only (parent)]
-        [lein-modules.inheritance :only (inherit)])
+        [lein-modules-new-profiles.common :only (parent)]
+        [lein-modules-new-profiles.inheritance :only (inherit)])
   (:require [leiningen.core.project :as prj]
             [leiningen.clean :refer [delete-file-recursively]]
             [clojure.java.io        :as io]))

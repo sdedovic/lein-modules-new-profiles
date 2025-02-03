@@ -1,5 +1,5 @@
-(ns lein-modules.versionization
-  (:use [lein-modules.common :only (config)]
+(ns lein-modules-new-profiles.versionization
+  (:use [lein-modules-new-profiles.common :only (config)]
         [leiningen.core.project :only (artifact-map)]))
 
 (defn versions

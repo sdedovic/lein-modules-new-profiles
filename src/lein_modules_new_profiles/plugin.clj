@@ -1,7 +1,7 @@
-(ns lein-modules.plugin
-  (:use [lein-modules.versionization :only (versionize)]
-        [lein-modules.inheritance    :only (inherit)]
-        [lein-modules.common         :only (config)]))
+(ns lein-modules-new-profiles.plugin
+  (:use [lein-modules-new-profiles.versionization :only (versionize)]
+        [lein-modules-new-profiles.inheritance    :only (inherit)]
+        [lein-modules-new-profiles.common         :only (config)]))
 
 (defn middleware
   "Implicit Leiningen middleware, guarding recursive
