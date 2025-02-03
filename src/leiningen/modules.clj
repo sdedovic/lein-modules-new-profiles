@@ -5,7 +5,8 @@
             [leiningen.core.utils :as utils]
             [clojure.java.io :as io]
             [clojure.string :as s])
-  (:use [lein-modules.inheritance :only (inherit)]
+  (:use
+        [lein-modules.plugin :only (middleware)]
         [lein-modules.common      :only (parent with-profiles read-project)]
         [lein-modules.compression :only (compressed-profiles)]))
 
@@ -185,7 +186,7 @@ Accepts '-q', '--quiet' and ':quiet' to suppress non-subprocess output."
                          (if (= :windows (utils/get-os)) "lein.bat" "lein")))]
       (when-not quiet?
         (print-modules opts modules))
-      (doseq [project modules]
+      (doseq [project  (map middleware modules)]
         (when-not quiet?
           (println "------------------------------------------------------------------------")
           (println " Building" (:name project) (:version project) (dump-profiles args))
