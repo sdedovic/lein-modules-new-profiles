@@ -40,5 +40,6 @@
   (let [vmap (merge (select-keys project [:version]) (versions project))
         f #(with-meta (for [d %] (expand-version d vmap)) (meta %))]
     (-> project
+      (update-in [:managed-dependencies] f)
       (update-in [:dependencies] f)
       (update-in [:parent] expand-version vmap))))
