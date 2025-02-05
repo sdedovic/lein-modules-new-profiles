@@ -1,4 +1,4 @@
-(defproject com.dedovic/lein-modules-new-profiles "0.3.16"
+(defproject com.dedovic/lein-modules-new-profiles "0.3.17-SNAPSHOT"
   :description "Similar to Maven multi-module projects, but less sucky"
   :url "https://github.com/sdedovic/lein-modules-new-profiles"
   :license {:name "Eclipse Public License"
