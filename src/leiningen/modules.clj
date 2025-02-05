@@ -179,7 +179,8 @@ Accepts '-q', '--quiet' and ':quiet' to suppress non-subprocess output."
                 (drop 2 args)))
     nil (print-modules opts (ordered-builds project))
     (let [modules (ordered-builds project)
-          profiles (compressed-profiles project)
+          profiles [:inherited]
+          ;profiles (compressed-profiles project)
           args (cli-with-profiles profiles args)
           subprocess (get-in project [:modules :subprocess]
                        (or (System/getenv "LEIN_CMD")
